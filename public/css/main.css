@@ -1,0 +1,9 @@
+.blurred {
+  -webkit-filter: blur(3px) !important;
+  -moz-filter: blur(3px) !important;
+  -o-filter: blur(3px) !important;
+  -ms-filter: blur(3px) !important;
+  filter: blur(3px) !important;
+  background-color: #ccc !important;
+
+}
