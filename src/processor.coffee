@@ -3,9 +3,8 @@
 
 Clarifai = require('clarifai')
 
-app = new Clarifai.App(process.env.CLARIFAI_ID, process.env.CLARIFAI_SECRET)
-
-safeOrNah = (link, cb) ->
+module.exports = (link, cb) ->
+  app = new Clarifai.App(process.env.CLARIFAI_ID, process.env.CLARIFAI_SECRET)
   app.models.predict(Clarifai.NSFW_MODEL, link).then(
     (res) ->
       if (res.data.outputs[0].data.concepts[0].value >= 0.85)
@@ -18,6 +17,6 @@ safeOrNah = (link, cb) ->
       #
 )
 
-safeOrNah('https://samples.clarifai.com/nsfw.jpg', (err, result) -> console.log result)
+#safeOrNah('https://samples.clarifai.com/nsfw.jpg', (err, result) -> console.log result)
 
 # coffee processor.coffee
