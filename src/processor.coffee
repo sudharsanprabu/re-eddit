@@ -7,7 +7,12 @@ module.exports = (link, cb) ->
   app = new Clarifai.App(process.env.CLARIFAI_ID, process.env.CLARIFAI_SECRET)
   app.models.predict(Clarifai.NSFW_MODEL, link).then(
     (res) ->
-      if (res.data.outputs[0].data.concepts[0].value >= 0.88)
+      percentageValue = 0;
+      if (res.data.outputs[0].data.concepts[0].name == "sfw")
+        percentageValue = res.data.outputs[0].data.concepts[0].value
+      else
+        percentageValue = res.data.outputs[0].data.concepts[1].value
+      if (percentageValue >= 0.85)
         cb null, true
       else
         cb null, false
