@@ -10,8 +10,9 @@ module.exports = (subreddit, cb) ->
       urls = []
       urls.push item.thumbnail
       # Now add preview.images urls to images
-      for image in item.preview.images
-        urls.push image.source.url
+      if item?.preview?
+        for image in item.preview.images
+          urls.push image.source.url
 
       markSafe = (item2, cb3) ->
         processor item2, (err, result2) ->
