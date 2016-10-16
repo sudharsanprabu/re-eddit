@@ -1,0 +1,39 @@
+
+os: linux
+version: 0.0
+
+
+files:
+  - source: Dockerfile
+    destination: /opt/dubhacks-2016
+
+  - source: index.js
+    destination: /opt/dubhacks-2016
+
+  - source: lib
+    destination: /opt/dubhacks-2016/lib
+
+  - source: Makefile
+    destination: /opt/dubhacks-2016
+
+  - source: package.json
+    destination: /opt/dubhacks-2016
+
+  - source: README.md
+    destination: /opt/dubhacks-2016
+
+  - source: src
+    destination: /opt/dubhacks-2016
+
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      runas: root
+
+  AfterInstall:
+    - location: scripts/after_install.sh
+      runas: root
+
+  ApplicationStart:
+    - location: scripts/app_start.sh
+runas: root
