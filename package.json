@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "request-promise": "^4.1.1",
+    "snoowrap": "^1.10.0",
+    "util": "^0.10.3"
   },
   "devDependencies": {
     "coffee-script": "^1.11.1"
