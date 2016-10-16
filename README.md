@@ -1,6 +1,36 @@
-# Dubhacks 2016 Group
+# Custodian - Dubhacks 2016
+
+## Description
+
+A Nodejs API that filters NSFW and inflammatory subreddit
+posts from a given subreddit.
+
+Allows for a more friendly, less bully prone reddit browsing
+experience.
+
+Uses Clarifai's NSFW trained image processing model to determine
+if subreddit posts' thumbnails and linked images are NSFW.
+
+Uses Google's natural language processing API to determine if the subreddit posts' contain negative sentiment.
+
+
+## Dependencies
+
+* Clarifai Image Recognition API
+* Google Natural Language Processing API
+* Snoowrap - Nodejs wrapper for the Reddit API
+* Express - Nodejs http server
+
+## Infrastructure
+
+* Docker - containerizes this app!
+* Amazon Web Services - hosts this app!
 
 ## Usage
+
+TODO
+
+## Contributing
 
 #### Using Git
 
@@ -22,18 +52,18 @@ git add .
 git commit -m "commit message"
 ```
 
-Ready to make a merge request on github:
+Ready to make a pull request on github:
 
 ```sh
 git checkout master # switch to master
 git pull # get all updates to master
-git checkout -b cool-feature-mr # make a new branch
+git checkout -b cool-feature-pr # make a new branch
 git merge --squash cool-feature # merge our working branch into this new branch that has master's updates
-git commit -m "new merge request commit"
-git push -u origin cool-feature-mr # add this new branch to github
+git commit -m "new pull request commit"
+git push -u origin cool-feature-pr # add this new branch to github
 ```
 
-Finally, make the merge request on github!
+Finally, make the pull request on github!
 
 This is a good way to do code review since we can look at the changes
-we've made while reviewing the merge request.
+we've made while reviewing the pull request.
