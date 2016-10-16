@@ -34,12 +34,8 @@ module.exports = (subreddit, cb) ->
       textTransformer = (item3, cb4) ->
         text = item3.selftext + item3.title
         sentiment text, (err, values) ->
-<<<<<<< HEAD
-          if values.polarity < -0.5 and !item3.nsfw
-=======
-          console.log values
+
           if (values.polarity < -99.0 and values.magnitude > 100) and (!item3.nsfw)
->>>>>>> update
             item3.nsfw = true
           cb4 null, item3
 
