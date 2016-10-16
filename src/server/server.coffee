@@ -5,8 +5,7 @@ custodian = require '../custodian'
 
 app = express()
 
-app.get '/', (req, res) ->
-  res.send 'Hello world!'
+app.use express.static '../../public'
 
 app.get '/:subreddit', (req, res) ->
   name = req.params.subreddit

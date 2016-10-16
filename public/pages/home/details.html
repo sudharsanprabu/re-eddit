@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 40px;">
+
+	<div class="row">
+		<div class="col-md-1">
+			<p ng-click="switchView()"><a href="">[back]</a></p>
+		</div>
+		<div class="col-md-3">
+			<img src="{{posts[detailIndex].thumbnail}}">
+		</div>
+		<div class="col-md-8">
+			<p>{{posts[detailIndex].title}}</p>
+		</div>
+	</div>
+
+	<div class="row" ng-show="posts[detailIndex].selftext">
+		<div class="col-md-12">
+			<p>{{posts[detailIndex].selftext}}</p>
+		</div>
+	</div>
+
+	<div ng-if="posts[detailIndex].preview" style="margin-top: 15px;">
+		<div class="row" ng-repeat="image in posts[detailIndex].preview.images">
+			<img src="{{image.source.url}}">
+		</div>
+	</div>
+
+</div>
