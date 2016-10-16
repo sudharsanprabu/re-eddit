@@ -4,6 +4,14 @@
   -o-filter: blur(3px) !important;
   -ms-filter: blur(3px) !important;
   filter: blur(3px) !important;
-  background-color: #ccc !important;
+  background-color: #000 !important;
+}
 
+.image-blurred {
+  -webkit-filter: blur(15px) !important;
+  -moz-filter: blur(15px) !important;
+  -o-filter: blur(15px) !important;
+  -ms-filter: blur(15px) !important;
+  filter: blur(15px) !important;
+  background-color: #000 !important;
 }
