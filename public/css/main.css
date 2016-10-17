@@ -8,10 +8,10 @@
 }
 
 .image-blurred {
-  -webkit-filter: blur(15px) !important;
-  -moz-filter: blur(15px) !important;
-  -o-filter: blur(15px) !important;
-  -ms-filter: blur(15px) !important;
-  filter: blur(15px) !important;
+  -webkit-filter: blur(25px) !important;
+  -moz-filter: blur(25px) !important;
+  -o-filter: blur(25px) !important;
+  -ms-filter: blur(25px) !important;
+  filter: blur(25px) !important;
   background-color: #000 !important;
 }

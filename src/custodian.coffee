@@ -20,25 +20,28 @@ module.exports = (subreddit, cb) ->
 
       async.map urls, markSafe, (err, results) ->
         # results are booleans
-        item.nsfw = false
+        item.nsfw = true
         for elem in results
-          if elem is false
-            item.nsfw = true
+          if elem is true
+            item.nsfw = false
 
         cb2 err, item
 
 
     async.map results, imgTransformer, (err, modResults) ->
+
       #cb err, modResults
       textTransformer = (item3, cb4) ->
         text = item3.selftext + item3.title
         sentiment text, (err, values) ->
-          if values.polarity < -0.5 and !item3.nsfw
+
+          if (values.polarity < -99.0 and values.magnitude > 100) and (!item3.nsfw)
             item3.nsfw = true
           cb4 null, item3
 
       async.map modResults, textTransformer, (err, finalResults) ->
         cb err, finalResults
+
 
 
 

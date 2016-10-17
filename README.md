@@ -1,9 +1,11 @@
-# Custodian - Dubhacks 2016
+# Re-eddit - Dubhacks 2016
 
 ## Description
 
 A Nodejs API that filters NSFW and inflammatory subreddit
 posts from a given subreddit.
+
+Comes with a front-end in angularjs.
 
 Allows for a more friendly, less bully prone reddit browsing
 experience.
@@ -19,11 +21,11 @@ Uses Google's natural language processing API to determine if the subreddit post
 * Clarifai Image Recognition API
 * Google Natural Language Processing API
 * Snoowrap - Nodejs wrapper for the Reddit API
+* Angularjs - UI framework
 * Express - Nodejs http server
 
 ## Infrastructure
 
-* Docker - containerizes this app!
 * Amazon Web Services - hosts this app!
 
 ## Usage
