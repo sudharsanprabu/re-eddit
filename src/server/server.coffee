@@ -12,4 +12,5 @@ app.get '/:subreddit', (req, res) ->
   custodian name, (err, results) ->
     res.json(results)
 
-app.listen 8080
+app.listen 8080, () ->
+  console.log 'running at localhost:8080'
