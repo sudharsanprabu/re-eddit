@@ -1,0 +1,17 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<div class="text-center">
+				<form class="navbar-form" ng-submit="submit()">
+					<div class="form-group">
+						<label>Search subreddit</label>
+						<input class="form-control" ng-model="subreddit" placeholder="ex: todayilearned" type="text" required>
+						<button class="btn btn-primary" type="submit">Search</button>
+						<img ng-show="isLoading" src="/img/ajax-loader.gif">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</nav>
